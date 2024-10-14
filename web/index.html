@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación a Fiesta</title>
+    <style>
+        body {
+            background-image: url(foto1.jpg);
+            background-repeat: no-repeat;
+            font-family: 'Arial', sans-serif;
+         
+            color: #00fff2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: transparent;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(62, 210, 236, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #ff6363;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #00fff2;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"] {
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 2px solid #ff9a9e;
+            font-size: 1em;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+        }
+        input[type="submit"] {
+            background-color: #ff6363;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #ff4040;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #00fff2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Estás invitado a nuestra Fiesta de Disfrases!</h1>
+        <p>Te esperamos en el CBTIS 254</p>
+        <p>Fecha:31 de octubre del 2024</p>
+        <p>Hora:09:00am</p>
+        
+        <form action="guardar_datos.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+            
+            <input type="submit" value="Confirmar asistencia">
+        </form>
+        <div class="footer">¡No olvides traer tu mejor actitud festiva! 🎉</div>
+    </div>
+</body>
+</html>
